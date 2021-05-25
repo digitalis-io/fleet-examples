@@ -25,6 +25,19 @@ helm:
   values:
     replicaCount: 2
 
-yaml:
-  overlays:
-    - secrets
+targetCustomizations:
+  - name: prod
+    helm:
+      values:
+        replicaCount: 2
+  clusterSelector:
+    matchLabels:
+      env: prod
+
+  - name: dev
+    helm:
+      values:
+        replicaCount: 1
+  clusterSelector:
+    matchLabels:
+      env: dev
