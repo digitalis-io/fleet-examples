@@ -23,10 +23,13 @@ helm:
 
   # Custom values that will be passed as values.yaml to the installation
   values:
-    replicas: 2
+    replicaCount: 2
     ingress:
       enabled: true
       hosts:
         - host: 51.210.249.104.nip.io
           paths:
             - /httpbin
+      tls:
+        hosts:
+          - 51.210.249.104.nip.io
