@@ -25,6 +25,6 @@ helm:
   values:
     replicaCount: 2
 
-  yaml:
-    overlays:
-      - secrets
+yaml:
+  overlays:
+    - secrets
