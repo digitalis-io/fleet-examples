@@ -30,14 +30,14 @@ targetCustomizations:
     helm:
       values:
         replicaCount: 2
-  clusterSelector:
-    matchLabels:
-      env: prod
+    clusterSelector:
+      matchLabels:
+        env: prod
 
   - name: dev
     helm:
       values:
         replicaCount: 1
-  clusterSelector:
-    matchLabels:
-      env: dev
+    clusterSelector:
+      matchLabels:
+        env: dev
