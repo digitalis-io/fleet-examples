@@ -1,0 +1,12 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: httpbin
+  namespace: fleet-local
+spec:
+  branch: master
+  insecureSkipTLSVerify: false
+  repo: https://github.com/digitalis-io/fleet-examples.git
+  targets:
+  - clusterSelector: {}
+type: fleet.cattle.io.gitrepo
