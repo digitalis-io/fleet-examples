@@ -23,7 +23,9 @@ helm:
 
   # Custom values that will be passed as values.yaml to the installation
   values:
-    replicaCount: 2
+    replicaCount: 1
+    username: ref+vault://secret/helm/test/username
+    password: ref+vault://secret/helm/test/password
 
 targetCustomizations:
   - name: prod
