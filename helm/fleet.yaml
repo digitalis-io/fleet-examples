@@ -26,6 +26,8 @@ helm:
     replicaCount: 1
     username: ref+vault://secret/helm/test/username
     password: ref+vault://secret/helm/test/password
+  valuesFiles:
+    - secrets.yaml
 
 targetCustomizations:
   - name: prod
